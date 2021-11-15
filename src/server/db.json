@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "name": "Sourabh Chavan",
+      "email": "sourabhchavan73@gmail.com",
+      "phone": "09823830999",
+      "address": "sangli",
+      "id": 1
+    },
+    {
+      "name": "Sourabh Chavan",
+      "email": "sourabhchavan73@gmail.com",
+      "phone": "09823830999",
+      "address": "sangli",
+      "id": 2
+    }
+  ]
+}
