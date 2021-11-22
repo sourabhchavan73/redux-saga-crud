@@ -19,7 +19,9 @@ class Home extends React.Component {
         if(window.confirm("are you sure want to delete")){
             this.props.deleteUserStart(id)
         }
-        toast.success("user deleted successfully")
+        setTimeout(()=> {
+            toast.info("user deleted successfully")
+        }, 600)
     }
 
     renderUserList(){

@@ -13,9 +13,7 @@ class AddEditUser extends React.Component {
             name: "",
             email: "",
             phone: "",
-            address: "",
-
-            
+            address: "",            
         }
     }
 
@@ -47,11 +45,14 @@ class AddEditUser extends React.Component {
         history.push('/')
     }
 
+
     render() {
-        const { name, email, phone, address} = this.state;
-        console.log(this.props)
+        const { name, email, phone, address, isLoading} = this.state;
+
         return (
             <MDBRow>
+            {console.log(this.props.isLoading)}
+
                 <MDBCol xl="5" lg="6" md="8" className="mx-auto">
                     <form
                         className="needs-validation"
@@ -92,6 +93,9 @@ class AddEditUser extends React.Component {
                                     placeholder="Email"
                                     required
                                 />
+                                <div className="invalid-feedback">
+                                    Please provide a valid Email.
+                                </div>
                                 <div className="valid-feedback">Looks good!</div>
                             </MDBCol>
 
@@ -107,6 +111,7 @@ class AddEditUser extends React.Component {
                                     className="form-control"
                                     name="phone"
                                     placeholder="Enter Phone"
+                                    min="10"
                                     required
                                 />
 
@@ -138,7 +143,7 @@ class AddEditUser extends React.Component {
                         </MDBRow>
                         
                         <div>
-                            <MDBBtn color="primary" type="submit" >
+                            <MDBBtn style={{ marginRight: '10px'}}  color="primary" type="submit" >
                                 Add User
                             </MDBBtn>
 
@@ -155,7 +160,7 @@ class AddEditUser extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        user: state.users.users[ownProps.match.params.id - 1]
+        user: state.users.users[ownProps.match.params.id - 1],
     }
 }
 

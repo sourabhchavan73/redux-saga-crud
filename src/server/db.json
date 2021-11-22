@@ -1,18 +1,46 @@
 {
   "users": [
     {
-      "name": "Sourabh Chavan",
+      "name": "Sourabh Chavan updated seconf",
       "email": "sourabhchavan73@gmail.com",
-      "phone": "09823830999",
-      "address": "sangli",
+      "phone": "9812830999",
+      "address": "mumbai is updated new addresss",
       "id": 1
     },
     {
-      "name": "Sourabh Chavan",
-      "email": "sourabhchavan73@gmail.com",
-      "phone": "09823830999",
-      "address": "sangli",
+      "name": "bag",
+      "email": "abc.xyz@gmail.com",
+      "phone": "1000",
+      "address": "Solapur",
       "id": 2
+    },
+    {
+      "name": "sfsf",
+      "email": "abc@gmail.com",
+      "phone": "556656",
+      "address": "Solapur",
+      "id": 3
+    },
+    {
+      "name": "Dhiraj is updated",
+      "email": "dhiraj@gmail.com",
+      "phone": "7895565659",
+      "address": "Pune",
+      "id": 4
+    },
+    {
+      "name": "sourabh",
+      "email": "abc@gmail.com",
+      "phone": "5995656565",
+      "address": "mumbai",
+      "id": 5
+    },
+    {
+      "name": "sourabh123",
+      "email": "sourabh.chavan@sumasoft.net",
+      "phone": "89999986565",
+      "address": "sangli",
+      "id": 6
     }
   ]
 }

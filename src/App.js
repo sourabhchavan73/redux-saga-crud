@@ -9,6 +9,7 @@ import Header from './component/common/Header';
 import Home from './pages/Home';
 import About from './pages/About';
 import AddEditUser from './pages/AddEditUser';
+import EditUser from './pages/EditUser'
 import UserInfo from './pages/UserInfo';
 import history from './history';
 import { ToastContainer } from 'react-toastify';
@@ -24,7 +25,7 @@ function App() {
                     <Route path="/" exact component={Home} />
                     <Route path="/about" exact component={About} />
                     <Route path="/adduser" exact component={AddEditUser} />
-                    <Route path="/edituser/:id" exact component={AddEditUser} />
+                    <Route path="/edituser/:id" exact component={EditUser} />
                     <Route path="/userinfo/:id" exact component={UserInfo} />
                 </Switch>
             </Container>

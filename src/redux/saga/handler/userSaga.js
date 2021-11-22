@@ -8,6 +8,7 @@ import {
     call
 } from 'redux-saga/effects';
 
+
 import { loadUserAPI, createUserAPI, deleteUserAPI, updateUserAPI } from '../../../apis/user';
 import { deleteUserSuccess, deleteUserFailed, loadUserFailed, loadUserSuccess, createUserSuccess, createUserFailed, updateUserSuccess } from '../../actions';
 import * as types from '../../actions/types'
@@ -47,24 +48,38 @@ function* onCreateuser(){
     yield takeLatest(types.CREATE_USER_START, onCreateUserStartAsync)
 };
 
-function* onDeleteUserStartAsync(id){
+function* onDeleteUserStartAsync(action){
+    // try{
+    //     const response = yield call(deleteUserAPI , id);
+    //     if(response.status === 200){
+    //         yield delay(500);
+    //         yield put(deleteUserSuccess(id))
+    //     }
+    // }
+    // catch (error){
+    //     yield put(deleteUserFailed(error.response.data))
+    // }
     try{
-        const response = yield call(deleteUserAPI , id);
-        if(response.status === 200){
-            yield delay(500);
-            yield put(deleteUserSuccess(id))
+        const response = yield call(deleteUserAPI, action.payload)
+        if (response.status === 200){
+            yield delay(5000);
+            yield put(deleteUserSuccess(action.payload))
+
         }
     }
     catch (error){
         yield put(deleteUserFailed(error.response.data))
     }
+    
 }
 
 function* onDeleteuser(){
-    while(true){
-        const {payload: id} = yield take(types.DELETE_USER_START)
-        yield call(onDeleteUserStartAsync, id)
-    }
+    // while(true){
+    //     const {payload: id} = yield take(types.DELETE_USER_START)
+    //     yield call(onDeleteUserStartAsync, id)
+    // }
+
+    yield takeLatest(types.DELETE_USER_START, onDeleteUserStartAsync)
 };
 
 

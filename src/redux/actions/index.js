@@ -55,8 +55,12 @@ export const updateUserStart = (id, user) => ({
     }
 })
 
-export const updateUserSuccess = () => ({
+export const updateUserSuccess = (id, user) => ({
     type: types.UPDATE_USER_SUCCESS,
+    payload: {
+        id,
+        user
+    }
 })
 
 export const updateUserFailed = (err) => ({
